@@ -1,0 +1,7 @@
+-- format gdscript
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--     pattern = "*.gd",
+--     callback = function()
+--         vim.cmd(':!gdformat %:p')
+--     end,
+-- })
