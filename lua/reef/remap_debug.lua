@@ -1,5 +1,6 @@
 local run_handler = function()
     local filetype = vim.bo.filetype
+    vim.cmd(':w')
 
     if filetype == 'rust' then
         vim.cmd(':!cargo r')
@@ -12,6 +13,7 @@ end
 
 local build_handler = function()
     local filetype = vim.bo.filetype
+    vim.cmd(':w')
 
     if vim.fn.filereadable('./build.bat') then
         vim.cmd(':!build.bat')
