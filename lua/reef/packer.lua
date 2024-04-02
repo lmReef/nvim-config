@@ -59,6 +59,10 @@ return require('packer').startup(function(use)
         'folke/tokyonight.nvim',
         as = 'tokyonight'
     }
+    use {
+        'morhetz/gruvbox',
+        as = 'gruvbox'
+    }
 
     -- themes end
 
