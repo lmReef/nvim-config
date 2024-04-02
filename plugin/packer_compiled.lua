@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  dracula = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula",
+    url = "https://github.com/maxmx03/dracula.nvim"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fidget.nvim",
@@ -113,6 +123,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  fzf = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -128,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  kanagawa = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\kanagawa",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -158,6 +183,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mini.nvim",
     url = "https://github.com/echasnovski/mini.nvim"
+  },
+  molokai = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\molokai",
+    url = "https://github.com/tomasr/molokai"
+  },
+  neoformat = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
+  nightfox = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfox",
+    url = "https://github.com/edeneast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -226,6 +266,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  tokyodark = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyodark",
+    url = "https://github.com/tiagovla/tokyodark.nvim"
+  },
+  tokyonight = {
+    loaded = true,
+    path = "C:\\Users\\reefm\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,

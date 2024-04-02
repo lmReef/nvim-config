@@ -31,13 +31,34 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     }
-
-    -- use 'maxmx03/dracula.nvim'
-
-    -- use 'oxfist/night-owl.nvim'
-    -- testing giut stuff
-    --
-    --
+    use {
+        'maxmx03/dracula.nvim',
+        as = 'dracula'
+    }
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin'
+    }
+    use {
+        'tomasr/molokai',
+        as = 'molokai'
+    }
+    use {
+        'rebelot/kanagawa.nvim',
+        as = 'kanagawa'
+    }
+    use {
+        'edeneast/nightfox.nvim',
+        as = 'nightfox'
+    }
+    use {
+        'tiagovla/tokyodark.nvim',
+        as = 'tokyodark'
+    }
+    use {
+        'folke/tokyonight.nvim',
+        as = 'tokyonight'
+    }
 
     -- themes end
 
@@ -129,7 +150,10 @@ return require('packer').startup(function(use)
         opts = {},
     }
 
-    use {
-        'onsails/lspkind.nvim'
-    }
+    use 'onsails/lspkind.nvim'
+
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+
+    use 'sbdchd/neoformat'
 end)
