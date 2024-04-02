@@ -74,7 +74,8 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use 'nvim-treesitter/playground'
+    -- depreciated
+    -- use 'nvim-treesitter/playground'
 
     use 'nvim-lua/plenary.nvim' -- req for harpoon
     use {
@@ -138,6 +139,8 @@ return require('packer').startup(function(use)
 
     use 'simrat39/symbols-outline.nvim'
 
+    -- prefer netrw for now
+    -- use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
 
     use {
