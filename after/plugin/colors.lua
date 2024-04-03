@@ -24,6 +24,10 @@ function RandomTheme()
 	Theme(themes[math.random(0, #themes - 1)])
 end
 
+function CurrentTheme()
+	print(vim.g.colors_name)
+end
+
 function ListThemes()
 	for i, name in ipairs(themes) do
 		print(name)
