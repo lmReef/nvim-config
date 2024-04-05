@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use 'BurntSushi/ripgrep'
     use {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
@@ -63,7 +64,12 @@ return require('packer').startup(function(use)
         'morhetz/gruvbox',
         as = 'gruvbox'
     }
+    use {
+        'navarasu/onedark.nvim',
+        as = 'onedark'
+    }
 
+    use 'xiyaowong/transparent.nvim'
     -- themes end
 
     use {
@@ -113,6 +119,7 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-cmdline' },
             { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lua' },
             { 'rafamadriz/friendly-snippets' },
@@ -120,7 +127,9 @@ return require('packer').startup(function(use)
     }
 
     -- notification popups for progress and lsp etc...
-    use 'j-hui/fidget.nvim'
+    use {
+        'j-hui/fidget.nvim',
+    }
 
     use 'folke/which-key.nvim'
 
@@ -163,4 +172,8 @@ return require('packer').startup(function(use)
     use 'junegunn/fzf.vim'
 
     use 'sbdchd/neoformat'
+
+    use 'vimwiki/vimwiki'
+
+    use 'axkirillov/easypick.nvim'
 end)

@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/dracula",
     url = "https://github.com/maxmx03/dracula.nvim"
+  },
+  ["easypick.nvim"] = {
+    loaded = true,
+    path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/easypick.nvim",
+    url = "https://github.com/axkirillov/easypick.nvim"
   },
   ["fidget.nvim"] = {
     loaded = true,
@@ -224,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  onedark = {
+    loaded = true,
+    path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/onedark",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -277,6 +292,11 @@ _G.packer_plugins = {
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/tokyonight",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/undotree",
@@ -296,6 +316,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/lmreef/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   },
   ["which-key.nvim"] = {
     loaded = true,
