@@ -1,0 +1,33 @@
+-- vim.api.nvim_create_autocmd("CursorMoved", {
+--     callback = function()
+--         -- if (vim.bo.filetype == "netrw") then
+--         local current_line = vim.api.nvim_get_current_line()
+--         local is_file = string.match(current_line, "%a+%.%a+")
+--         -- if (is_file) then
+--         --     local keys = vim.api.nvim_replace_termcodes("p", true, false, true)
+--         --     vim.api.nvim_feedkeys(keys, "m", false)
+--         -- else
+--         --     vim.cmd("pc")
+--         -- end
+--         -- end
+--         local buf = vim.fn.bufadd(is_file)
+--         vim.fn.bufload(buf)
+--         vim.api.nvim_open_win(buf, 0, {
+--             relative = "win"
+--             width = 30,
+--             height = 30,
+--             col = 0,
+--             row = 0,
+--             focusable = false
+--         })
+--     end,
+--     group = vim.api.nvim_create_augroup("netrw-preview", { clear = false })
+-- })
+
+-- vim.api.nvim_create_autocmd("BufLeave", {
+--     callback = function()
+--         vim.cmd(":silent augroup! netrw-preview")
+--         print("removed preview autocmd")
+--     end,
+--     once = true
+-- })

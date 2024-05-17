@@ -176,4 +176,13 @@ return require('packer').startup(function(use)
     use 'vimwiki/vimwiki'
 
     use 'axkirillov/easypick.nvim'
+
+    use 'windwp/nvim-ts-autotag'
+
+    -- use {
+    --     'laytan/tailwind-sorter.nvim',
+    --     requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
+    --     config = function() require('tailwind-sorter').setup({ on_save_setup = true }) end,
+    --     run = 'cd formatter && npm ci && npm run build',
+    -- }
 end)

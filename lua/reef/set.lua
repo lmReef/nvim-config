@@ -28,16 +28,17 @@ vim.opt.isfname:append('@-@')
 vim.opt.updatetime = 100
 
 vim.opt.cursorline = true
-vim.opt.colorcolumn = '80'
+-- vim.opt.colorcolumn = '80'
+
+-- set netrw file preview styles
+vim.g.netrw_preview = 1
+-- vim.g.netrw_liststyle = 3 -- 3 for tree style
+vim.g.netrw_winsize = 60
 
 vim.g.mapleader = " "
 
--- vim.opt.shell = 'mintty.exe'
--- vim.opt.shellcmdflag = '-e'
--- vim.opt.shellquote = ''
--- vim.opt.shellxquote = ''
-vim.opt.shell = 'cmd.exe'
-vim.opt.shellcmdflag = '/c'
+-- vim.opt.shell = 'cmd'
+-- vim.opt.shellcmdflag = '-c'
 vim.opt.shellquote = '"'
 vim.opt.shellxquote = ''
 
