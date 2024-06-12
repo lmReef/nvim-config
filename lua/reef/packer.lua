@@ -162,7 +162,9 @@ return require('packer').startup(function(use)
         'lukas-reineke/indent-blankline.nvim',
         -- Enable `lukas-reineke/indent-blankline.nvim`
         -- See `:help ibl`
-        main = 'ibl',
+        config = function()
+            require('ibl').setup()
+        end,
         opts = {},
     }
 
@@ -179,10 +181,10 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-ts-autotag'
 
-    -- use {
-    --     'laytan/tailwind-sorter.nvim',
-    --     requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
-    --     config = function() require('tailwind-sorter').setup({ on_save_setup = true }) end,
-    --     run = 'cd formatter && npm ci && npm run build',
-    -- }
+    use {
+        'laytan/tailwind-sorter.nvim',
+        requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
+        config = function() require('tailwind-sorter').setup({ on_save_setup = true, node_path = 'node' }) end,
+        run = 'cd formatter && npm ci && npm run build',
+    }
 end)
