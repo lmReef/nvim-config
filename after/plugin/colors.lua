@@ -8,8 +8,11 @@ local themes = {
 	'nightfox',
 	'tokyodark',
 	'tokyonight',
-	'gruvbox'
+	'gruvbox',
+	'onedark'
 }
+
+math.randomseed(os.time())
 
 function Theme(color)
 	color = color or "onedark"
