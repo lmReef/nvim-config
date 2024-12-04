@@ -17,7 +17,7 @@ math.randomseed(os.time())
 function Theme(color)
 	color = color or "onedark"
 	vim.cmd.colorscheme(color)
-	-- vim.cmd("TransparentEnable")
+	vim.cmd("TransparentEnable")
 
 	-- transparency is set in mintty
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

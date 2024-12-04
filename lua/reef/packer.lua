@@ -70,6 +70,7 @@ return require('packer').startup(function(use)
     }
 
     use 'xiyaowong/transparent.nvim'
+
     -- themes end
 
     use {
@@ -180,6 +181,8 @@ return require('packer').startup(function(use)
     use 'axkirillov/easypick.nvim'
 
     use 'windwp/nvim-ts-autotag'
+
+    use 'https://github.com/nextflow-io/vim-language-nextflow'
 
     use {
         'laytan/tailwind-sorter.nvim',
