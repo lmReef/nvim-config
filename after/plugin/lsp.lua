@@ -15,34 +15,45 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+-- Add cmp_nvim_lsp capabilities settings to lspconfig
+-- This should be executed before you configure any language server
+local lspconfig_defaults = require('lspconfig').util.default_config
+lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+    'force',
+    lspconfig_defaults.capabilities,
+    require('cmp_nvim_lsp').default_capabilities()
+)
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'rust_analyzer' },
+    ensure_installed = {},
     --     lsp_zero.default_setup,
-    -- handlers = {
-    --     lua_ls = function()
-    --         local lua_opts = lsp_zero.nvim_lua_ls()
-    --         require('lspconfig').lua_ls.setup(lua_opts)
-    --     end,
-    -- }
+    handlers = {
+        -- The first entry (without a key) will be the default handler
+        -- and will be called for each installed server that doesn't have
+        -- a dedicated handler.
+        function(server_name) -- default handler (optional)
+            require("lspconfig")[server_name].setup {}
+        end,
+        -- FIXME: https://www.reddit.com/r/neovim/comments/12abfoh/with_lsp_how_do_you_add_a_custom_server/
+        -- nextflow_ls = function()
+        --     local home = os.getenv("HOME")
+        --     require('lspconfig').nextflow_ls.setup({
+        --         -- on_attach = on_attach,
+        --         filetypes = { "nextflow" },
+        --         settings = {
+        --             nextflow = {
+        --                 classpath = {
+        --                         home .. ".config/nvim/language-servers/nextflow/build/libs",
+        --                         home .. ".config/nvim/language-servers/nextflow/buildSrc/classes",
+
+        --                 }
+        --             }
+        --         }
+        --     })
+        -- end,
+    }
 })
-require('mason-lspconfig').setup_handlers {
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {}
-    end,
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- For example, a handler override for the `rust_analyzer`:
-    -- rust_analyzer = function()
-    --     require('lspconfig').rust_analyzer.setup()
-    -- end,
-    lua_ls = function()
-        local lua_opts = lsp_zero.nvim_lua_ls()
-        require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-}
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
