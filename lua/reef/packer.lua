@@ -182,12 +182,9 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-ts-autotag'
 
-    use 'https://github.com/nextflow-io/vim-language-nextflow'
+    use 'nextflow-io/vim-language-nextflow'
 
-    use {
-        'laytan/tailwind-sorter.nvim',
-        requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
-        config = function() require('tailwind-sorter').setup({ on_save_setup = true, node_path = 'node' }) end,
-        run = 'cd formatter && npm ci && npm run build',
-    }
+    use 'direnv/direnv.vim'
+
+    use 'tpope/vim-obsession'
 end)
