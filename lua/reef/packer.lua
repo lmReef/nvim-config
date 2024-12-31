@@ -184,7 +184,5 @@ return require('packer').startup(function(use)
 
     use 'nextflow-io/vim-language-nextflow'
 
-    use 'direnv/direnv.vim'
-
     use 'tpope/vim-obsession'
 end)
