@@ -185,4 +185,6 @@ return require('packer').startup(function(use)
     use 'nextflow-io/vim-language-nextflow'
 
     use 'tpope/vim-obsession'
+
+    use 'brenoprata10/nvim-highlight-colors'
 end)
