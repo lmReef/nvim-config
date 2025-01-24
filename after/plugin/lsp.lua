@@ -67,6 +67,14 @@ cmp.setup({
         { name = 'luasnip', keyword_length = 2 },
         { name = 'buffer',  keyword_length = 3 },
     },
+    window = {
+        completion = cmp.config.window.bordered({ border = 'rounded', winhighlight = 'Normal:Normal,FloatBorder:Normal' }),
+        documentation = cmp.config.window.bordered({
+            border = 'rounded',
+            winhighlight =
+            'Normal:Normal,FloatBorder:Normal'
+        })
+    },
     -- formatting = lsp_zero.cmp_format(),
     formatting = {
         format = function(entry, item)
