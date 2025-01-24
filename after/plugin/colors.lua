@@ -1,18 +1,22 @@
 -- manually add themes here after installing
 local themes = {
-	'rose-pine',
-	'dracula',
-	'catppuccin',
-	'molokai',
-	'kanagawa',
-	'nightfox',
-	'tokyodark',
-	'tokyonight',
-	'gruvbox',
-	'onedark'
+	"rose-pine",
+	"dracula",
+	"catppuccin",
+	"molokai",
+	"kanagawa",
+	"nightfox",
+	"tokyodark",
+	"tokyonight",
+	"gruvbox",
+	"onedark",
 }
 
 math.randomseed(os.time())
+
+function PywalTheme()
+	require("pywal").setup()
+end
 
 function Theme(color)
 	color = color or "onedark"
@@ -38,4 +42,4 @@ function ListThemes()
 	end
 end
 
-Theme()
+-- Theme()

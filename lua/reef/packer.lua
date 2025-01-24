@@ -1,5 +1,4 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
@@ -28,48 +27,19 @@ return require("packer").startup(function(use)
 
     -- themes
 
-    use({
-        "rose-pine/neovim",
-        as = "rose-pine",
-    })
-    use({
-        "maxmx03/dracula.nvim",
-        as = "dracula",
-    })
-    use({
-        "catppuccin/nvim",
-        as = "catppuccin",
-    })
-    use({
-        "tomasr/molokai",
-        as = "molokai",
-    })
-    use({
-        "rebelot/kanagawa.nvim",
-        as = "kanagawa",
-    })
-    use({
-        "edeneast/nightfox.nvim",
-        as = "nightfox",
-    })
-    use({
-        "tiagovla/tokyodark.nvim",
-        as = "tokyodark",
-    })
-    use({
-        "folke/tokyonight.nvim",
-        as = "tokyonight",
-    })
-    use({
-        "morhetz/gruvbox",
-        as = "gruvbox",
-    })
-    use({
-        "navarasu/onedark.nvim",
-        as = "onedark",
-    })
-
+    use({ "AlphaTechnolog/pywal.nvim", as = "pywal" })
     use("xiyaowong/transparent.nvim")
+
+    use({ "rose-pine/neovim", as = "rose-pine" })
+    use({ "maxmx03/dracula.nvim", as = "dracula" })
+    use({ "catppuccin/nvim", as = "catppuccin" })
+    use({ "tomasr/molokai", as = "molokai" })
+    use({ "rebelot/kanagawa.nvim", as = "kanagawa" })
+    use({ "edeneast/nightfox.nvim", as = "nightfox" })
+    use({ "tiagovla/tokyodark.nvim", as = "tokyodark" })
+    use({ "folke/tokyonight.nvim", as = "tokyonight" })
+    use({ "morhetz/gruvbox", as = "gruvbox" })
+    use({ "navarasu/onedark.nvim", as = "onedark" })
 
     -- themes end
 
@@ -81,7 +51,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- depreciated
+    -- deprecated
     -- use 'nvim-treesitter/playground'
 
     use("nvim-lua/plenary.nvim") -- req for harpoon
@@ -108,33 +78,24 @@ return require("packer").startup(function(use)
         "VonHeikemen/lsp-zero.nvim",
         branch = "v3.x",
         requires = {
-            -- LSP Support
             { "neovim/nvim-lspconfig" },
-            -- Autocompletion
             { "hrsh7th/nvim-cmp" },
             { "hrsh7th/cmp-nvim-lsp" },
             { "hrsh7th/cmp-buffer" },
             { "hrsh7th/cmp-path" },
             { "hrsh7th/cmp-cmdline" },
             { "hrsh7th/nvim-cmp" },
+            { "hrsh7th/cmp-nvim-lua" },
             { "L3MON4D3/LuaSnip" },
-
-            -- req for prime's loadout
+            { "saadparwaiz1/cmp_luasnip" },
             { "williamboman/mason.nvim" },
             { "williamboman/mason-lspconfig.nvim" },
-            { "hrsh7th/cmp-buffer" },
-            { "hrsh7th/cmp-path" },
-            { "hrsh7th/cmp-cmdline" },
-            { "saadparwaiz1/cmp_luasnip" },
-            { "hrsh7th/cmp-nvim-lua" },
             { "rafamadriz/friendly-snippets" },
         },
     })
 
     -- notification popups for progress and lsp etc...
-    use({
-        "j-hui/fidget.nvim",
-    })
+    use({ "j-hui/fidget.nvim" })
 
     use("folke/which-key.nvim")
 

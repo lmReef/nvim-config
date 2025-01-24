@@ -1,7 +1,7 @@
-require('lualine').setup {
+require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = 'auto',
+		theme = "pywal-nvim",
 		-- component_separators = { left = '', right = '' },
 		-- section_separators = { left = '', right = '' },
 		disabled_filetypes = {
@@ -18,36 +18,36 @@ require('lualine').setup {
 		},
 	},
 	sections = {
-		lualine_a = { 'mode' },
-		lualine_b = { 'branch', 'diff', 'diagnostics' },
-		lualine_c = { 
+		lualine_a = { "mode" },
+		lualine_b = { "branch", "diff", "diagnostics" },
+		lualine_c = {
 			{
-				'filename',
+				"filename",
 				file_status = true,
 				newfile_status = true,
 				path = 1,
 				symbols = {
-					modified = '[+]',      -- Text to show when the file is modified.
-					readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
-					unnamed = '[No Name]', -- Text to show for unnamed buffers.
-					newfile = '[New]',     -- Text to show for newly created file before first write
-				}
-			}
+					modified = "[+]", -- Text to show when the file is modified.
+					readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+					unnamed = "[No Name]", -- Text to show for unnamed buffers.
+					newfile = "[New]", -- Text to show for newly created file before first write
+				},
+			},
 		},
-		lualine_x = { 'encoding', 'fileformat', 'filetype' },
-		lualine_y = { 'progress' },
-		lualine_z = { 'location' }
+		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { 'filename' },
-		lualine_x = { 'location' },
+		lualine_c = { "filename" },
+		lualine_x = { "location" },
 		lualine_y = {},
-		lualine_z = {}
+		lualine_z = {},
 	},
 	tabline = {},
 	winbar = {},
 	inactive_winbar = {},
-	extensions = {}
-}
+	extensions = {},
+})
