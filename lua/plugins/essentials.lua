@@ -32,7 +32,22 @@ return {
             "nvim-lua/plenary.nvim",
             "BurntSushi/ripgrep",
             "nvim-telescope/telescope-fzf-native.nvim",
-            "axkirillov/easypick.nvim",
+            -- TODO: can probably implement this without the plugin
+            {
+                "axkirillov/easypick.nvim",
+                config = function()
+                    local easypick = require("easypick")
+                    easypick.setup({
+                        pickers = {
+                            {
+                                name = "Changed Files",
+                                command = "git diff --name-only",
+                                previewer = easypick.previewers.file_diff(),
+                            },
+                        },
+                    })
+                end,
+            },
         },
     },
 
