@@ -42,4 +42,4 @@ function ListThemes()
 	end
 end
 
--- Theme()
+PywalTheme()
