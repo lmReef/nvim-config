@@ -1,14 +1,14 @@
-require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
+require("nvim-treesitter.install").compilers = { "clang", "gcc" }
 
-require 'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup({
 
 	ensure_installed = {
-		"c",
 		"lua",
 		"vim",
 		"vimdoc",
 		"query",
 		"gdscript",
+		"python",
 	},
 
 	-- Automatically install missing parsers when entering buffer
@@ -24,7 +24,7 @@ require 'nvim-treesitter.configs'.setup {
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	},
-}
+})
 
 -- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 -- parser_config.nextflow = {
@@ -42,11 +42,10 @@ require 'nvim-treesitter.configs'.setup {
 vim.filetype.add({
 	-- Detect and assign filetype based on the extension of the filename
 	extension = {
-		nf = "nextflow"
+		nf = "nextflow",
 	},
 	-- Detect and apply filetypes based on the entire filename
 	filename = {},
 	-- Detect and apply filetypes based on certain patterns of the filenames
-	pattern = {
-	}
+	pattern = {},
 })

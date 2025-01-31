@@ -5,8 +5,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     "sbdchd/neoformat",
 
-    -- "nvim-tree/nvim-web-devicons",
-
     {
         "VonHeikemen/lsp-zero.nvim",
         dependencies = {
@@ -64,6 +62,7 @@ return {
             stages = "fade_in_slide_out",
             fps = 90,
             timeout = 3500,
+            background_colour = "#999999",
         },
     },
 }
