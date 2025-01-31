@@ -56,4 +56,14 @@ return {
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
+
+    {
+        "rcarriga/nvim-notify",
+        opts = {
+            render = "wrapped-compact",
+            stages = "fade_in_slide_out",
+            fps = 90,
+            timeout = 3500,
+        },
+    },
 }
