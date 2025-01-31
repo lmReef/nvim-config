@@ -37,10 +37,7 @@ vim.g.netrw_winsize = 60
 
 vim.g.mapleader = " "
 
--- vim.opt.shell = 'cmd'
--- vim.opt.shellcmdflag = '-c'
-vim.opt.shellquote = '"'
-vim.opt.shellxquote = ""
+vim.opt.shell = "/usr/bin/env zsh"
 
 -- performance options
 vim.opt.showcmd = false
