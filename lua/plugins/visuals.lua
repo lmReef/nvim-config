@@ -3,7 +3,16 @@ return {
 
     {
         "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        dependencies = {
+            {
+                "nvim-tree/nvim-web-devicons",
+                opts = {
+                    color_icons = true,
+                    default = true,
+                    strict = true,
+                },
+            },
+        },
     },
 
     -- themes

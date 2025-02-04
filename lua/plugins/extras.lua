@@ -1,6 +1,5 @@
 return {
     "vimwiki/vimwiki",
-    "windwp/nvim-ts-autotag",
     "nextflow-io/vim-language-nextflow",
     "brenoprata10/nvim-highlight-colors",
     "mbbill/undotree",
@@ -8,9 +7,38 @@ return {
     "simrat39/symbols-outline.nvim",
 
     {
+        "windwp/nvim-ts-autotag",
+        opts = {},
+        ft = {
+            "astro",
+            "glimmer",
+            "handlebars",
+            "html",
+            "javascript",
+            "jsx",
+            "markdown",
+            "php",
+            "rescript",
+            "svelte",
+            "tsx",
+            "twig",
+            "typescript",
+            "vue",
+            "xml",
+        },
+    },
+
+    {
         "echasnovski/mini.nvim",
         dependencies = {
-            "nvim-tree/nvim-web-devicons",
+            {
+                "nvim-tree/nvim-web-devicons",
+                opts = {
+                    color_icons = true,
+                    default = true,
+                    strict = true,
+                },
+            },
             "lewis6991/gitsigns.nvim",
         },
     },
