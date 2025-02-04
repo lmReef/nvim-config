@@ -32,8 +32,8 @@ function RandomTheme()
 	Theme(themes[math.random(0, #themes - 1)])
 end
 
-function CurrentTheme()
-	print(vim.g.colors_name)
+function GetCurrentTheme()
+	return vim.g.colors_name
 end
 
 function ListThemes()
