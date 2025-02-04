@@ -42,3 +42,5 @@ vim.opt.shell = "/usr/bin/env zsh"
 -- performance options
 vim.opt.showcmd = false
 vim.opt.ruler = false
+
+vim.opt.pumheight = 5 -- set pop up max items | cmp, suggestions
