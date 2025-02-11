@@ -29,21 +29,6 @@ return {
     },
 
     {
-        "echasnovski/mini.nvim",
-        dependencies = {
-            {
-                "nvim-tree/nvim-web-devicons",
-                opts = {
-                    color_icons = true,
-                    default = true,
-                    strict = true,
-                },
-            },
-            "lewis6991/gitsigns.nvim",
-        },
-    },
-
-    {
         "lukas-reineke/indent-blankline.nvim",
         config = function()
             require("ibl").setup()
