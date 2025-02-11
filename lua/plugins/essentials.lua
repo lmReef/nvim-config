@@ -1,25 +1,28 @@
 return {
-	"luarocks/luarocks",
-	"nvim-lua/plenary.nvim",
-	"onsails/lspkind.nvim",
-	"sbdchd/neoformat",
+	{ "sbdchd/neoformat", event = "BufWritePre" },
 
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		dependencies = {
-			{ "neovim/nvim-lspconfig" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-cmdline" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-			{ "L3MON4D3/LuaSnip" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-			{ "rafamadriz/friendly-snippets" },
+			"neovim/nvim-lspconfig",
+			"onsails/lspkind.nvim", -- icons/glyphs
+			"hrsh7th/nvim-cmp",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/nvim-cmp",
+			"hrsh7th/cmp-nvim-lua",
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+			{
+				"williamboman/mason.nvim",
+				dependencies = {
+					"luarocks/luarocks",
+					"williamboman/mason-lspconfig.nvim",
+				},
+			},
+			"rafamadriz/friendly-snippets",
 		},
 	},
 
@@ -124,6 +127,7 @@ return {
 				harpoon:list():next()
 			end)
 		end,
+		keys = "<leader>",
 	},
 
 	{

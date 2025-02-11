@@ -1,10 +1,11 @@
 return {
-    "vimwiki/vimwiki",
-    "nextflow-io/vim-language-nextflow",
     "brenoprata10/nvim-highlight-colors",
     "mbbill/undotree",
     "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
     "simrat39/symbols-outline.nvim",
+
+    { "nextflow-io/vim-language-nextflow", ft = "nextflow" },
+    { "vimwiki/vimwiki",                   keys = "<leader>w" },
 
     {
         "windwp/nvim-ts-autotag",
