@@ -2,7 +2,6 @@ return {
 	"luarocks/luarocks",
 	"nvim-lua/plenary.nvim",
 	"onsails/lspkind.nvim",
-	"nvim-treesitter/nvim-treesitter",
 	"sbdchd/neoformat",
 
 	{
@@ -21,6 +20,42 @@ return {
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "rafamadriz/friendly-snippets" },
+		},
+	},
+
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {
+			install = {
+				compilers = {
+					"clang",
+					"gcc",
+				},
+			},
+			configs = {
+				ensure_installed = {
+					"lua",
+					"vim",
+					"vimdoc",
+					"query",
+					"gdscript",
+					"python",
+				},
+
+				-- Automatically install missing parsers when entering buffer
+				-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+				auto_install = true,
+
+				highlight = {
+					enable = true,
+
+					-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+					-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+					-- Using this option may slow down your editor, and you may see some duplicate highlights.
+					-- Instead of true it can also be a list of languages
+					additional_vim_regex_highlighting = false,
+				},
+			},
 		},
 	},
 
