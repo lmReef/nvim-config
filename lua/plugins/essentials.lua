@@ -1,16 +1,18 @@
 return {
-	{
-		"sbdchd/neoformat",
-		opts = {},
-		config = function()
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				callback = function()
-					vim.cmd("Neoformat")
-				end,
-			})
-		end,
-		event = "BufWritePre",
-	},
+	{ "nvim-lua/plenary.nvim", lazy = true },
+
+	-- {
+	-- 	"sbdchd/neoformat",
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
+	-- 			callback = function()
+	-- 				vim.cmd("Neoformat")
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- 	event = "BufWritePre",
+	-- },
 
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -24,16 +26,34 @@ return {
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/nvim-cmp",
 			"hrsh7th/cmp-nvim-lua",
-			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 			{
-				"williamboman/mason.nvim",
+				"L3MON4D3/LuaSnip",
+				-- dependencies = {
+
+				-- 	"rafamadriz/friendly-snippets",
+				-- },
+			},
+			{
+				"williamboman/mason-lspconfig.nvim",
+				opts = {
+					ensure_installed = {},
+					handlers = {
+						function(server_name) -- default handler
+							require("lspconfig")[server_name].setup({})
+						end,
+					},
+				},
 				dependencies = {
-					"luarocks/luarocks",
-					"williamboman/mason-lspconfig.nvim",
+					{
+						"williamboman/mason.nvim",
+						opts = {},
+						dependencies = {
+							"luarocks/luarocks",
+						},
+					},
 				},
 			},
-			"rafamadriz/friendly-snippets",
 		},
 	},
 
@@ -63,31 +83,6 @@ return {
 
 	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"BurntSushi/ripgrep",
-			"nvim-telescope/telescope-fzf-native.nvim",
-			{
-				"axkirillov/easypick.nvim",
-				config = function()
-					local easypick = require("easypick")
-					easypick.setup({
-						pickers = {
-							{
-								name = "Changed Files",
-								command = "git diff --name-only",
-								previewer = easypick.previewers.file_diff(),
-							},
-							{
-								name = "tmux-ls",
-								command = "tmux ls | grep -o -P '^.*(?=: )'",
-								action = easypick.actions.nvim_command(":silent !tmux switch-client -t"),
-							},
-						},
-					})
-				end,
-			},
-		},
 		config = function()
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
@@ -105,11 +100,32 @@ return {
 		end,
 		keys = "<leader>p",
 	},
+	{
+		"axkirillov/easypick.nvim",
+		config = function()
+			local easypick = require("easypick")
+			easypick.setup({
+				pickers = {
+					{
+						name = "Changed Files",
+						command = "git diff --name-only",
+						previewer = easypick.previewers.file_diff(),
+					},
+					{
+						name = "tmux-ls",
+						command = "tmux ls | grep -o -P '^.*(?=: )'",
+						action = easypick.actions.nvim_command(":silent !tmux switch-client -t"),
+					},
+				},
+			})
+		end,
+		lazy = true,
+		cmd = "Easypick",
+	},
 
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local harpoon = require("harpoon")
 			vim.keymap.set("n", "<leader>a", function()
