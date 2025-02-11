@@ -1,15 +1,15 @@
 -- manually add themes here after installing
 local themes = {
-	"rose-pine",
-	"dracula",
-	"catppuccin",
-	"molokai",
-	"kanagawa",
-	"nightfox",
-	"tokyodark",
-	"tokyonight",
-	"gruvbox",
 	"onedark",
+	-- "rose-pine",
+	-- "dracula",
+	-- "catppuccin",
+	-- "molokai",
+	-- "kanagawa",
+	-- "nightfox",
+	-- "tokyodark",
+	-- "tokyonight",
+	-- "gruvbox",
 }
 
 math.randomseed(os.time())
