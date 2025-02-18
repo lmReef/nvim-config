@@ -70,22 +70,45 @@ return {
 
 	{
 		"nvim-telescope/telescope.nvim",
+		dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 		config = function()
+			local telescope = require("telescope")
+			telescope.setup({
+				pickers = {
+					live_grep = {
+						file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+						additional_args = function(_)
+							return { "--hidden" }
+						end
+					},
+					find_files = {
+						file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+						hidden = true
+					}
+
+				},
+				extensions = {
+					"fzf"
+				},
+			})
+			telescope.load_extension("fzf")
+
 			local builtin = require("telescope.builtin")
+			vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
+			vim.keymap.set("n", "<leader>pk", builtin.keymaps, {})
 			vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>pc", builtin.git_branches, {})
+			vim.keymap.set("n", "<leader>pc", builtin.git_commits, {})
+			vim.keymap.set("n", "<leader>pb", builtin.git_branches, {})
+			vim.keymap.set("n", "<leader>pg", builtin.git_status, {})
 			vim.keymap.set("n", "<leader>pt", function()
 				vim.cmd(":Easypick tmux-ls")
 			end)
-			vim.keymap.set("n", "<leader>pg", function()
-				vim.cmd(":Easypick Changed Files")
-			end, {})
 			vim.keymap.set("n", "<leader>pn", function()
 				vim.cmd(":Telescope notify")
 			end)
 		end,
-		keys = "<leader>p",
+		keys = "<leader>p"
 	},
 	{
 		"axkirillov/easypick.nvim",
@@ -93,11 +116,6 @@ return {
 			local easypick = require("easypick")
 			easypick.setup({
 				pickers = {
-					{
-						name = "Changed Files",
-						command = "git diff --name-only",
-						previewer = easypick.previewers.file_diff(),
-					},
 					{
 						name = "tmux-ls",
 						command = "tmux ls | grep -o -P '^.*(?=: )'",
