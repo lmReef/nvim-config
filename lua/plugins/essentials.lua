@@ -76,13 +76,13 @@ return {
 			telescope.setup({
 				pickers = {
 					live_grep = {
-						file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+						file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
 						additional_args = function(_)
 							return { "--hidden" }
 						end
 					},
 					find_files = {
-						file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+						file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
 						hidden = true
 					}
 
@@ -94,19 +94,20 @@ return {
 			telescope.load_extension("fzf")
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
-			vim.keymap.set("n", "<leader>pk", builtin.keymaps, {})
-			vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>pc", builtin.git_commits, {})
-			vim.keymap.set("n", "<leader>pb", builtin.git_branches, {})
-			vim.keymap.set("n", "<leader>pg", builtin.git_status, {})
+			vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "Telescope help tags" })
+			vim.keymap.set("n", "<leader>pk", builtin.keymaps, { desc = "Telescope keymaps" })
+			vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
+			vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "Telescope live grep" })
+			vim.keymap.set("n", "<leader>pw", builtin.grep_string, { desc = "Telescope grep word" })
+			vim.keymap.set("n", "<leader>pc", builtin.git_commits, { desc = "Telescope git commits" })
+			vim.keymap.set("n", "<leader>pb", builtin.git_branches, { desc = "Telescope git branches" })
+			vim.keymap.set("n", "<leader>pg", builtin.git_status, { desc = "Telescope git status" })
 			vim.keymap.set("n", "<leader>pt", function()
 				vim.cmd(":Easypick tmux-ls")
-			end)
+			end, { desc = "Telescope tmux sessions" })
 			vim.keymap.set("n", "<leader>pn", function()
 				vim.cmd(":Telescope notify")
-			end)
+			end, { desc = "Telescope notification history" })
 		end,
 		keys = "<leader>p"
 	},
