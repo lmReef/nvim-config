@@ -11,12 +11,18 @@ return {
 		dependencies = {
 			"folke/twilight.nvim",
 		},
-		opts = {
-			plugins = {
-				twilight = { enabled = true },
-			}
-		},
 		config = function()
+			require('zen-mode').setup({
+				plugins = {
+					twilight = { enabled = true },
+				},
+				on_open = function(_)
+					vim.cmd("silent !tmux set status off")
+				end,
+				on_close = function()
+					vim.cmd("silent !tmux set status on")
+				end
+			})
 			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
 		end,
 		keys = "<leader>z"
