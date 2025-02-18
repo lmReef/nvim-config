@@ -7,6 +7,22 @@ return {
 	{ "vimwiki/vimwiki",                   keys = "<leader>w" },
 
 	{
+		"folke/zen-mode.nvim",
+		dependencies = {
+			"folke/twilight.nvim",
+		},
+		opts = {
+			plugins = {
+				twilight = { enabled = true },
+			}
+		},
+		config = function()
+			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
+		end,
+		keys = "<leader>z"
+	},
+
+	{
 		"mbbill/undotree",
 		config = function()
 			vim.keymap.set("n", "<leader>u", function()
