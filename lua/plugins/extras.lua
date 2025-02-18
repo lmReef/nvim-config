@@ -4,7 +4,7 @@ return {
 	"simrat39/symbols-outline.nvim",
 
 	{ "nextflow-io/vim-language-nextflow", ft = "nextflow" },
-	{ "vimwiki/vimwiki", keys = "<leader>w" },
+	{ "vimwiki/vimwiki",                   keys = "<leader>w" },
 
 	{
 		"mbbill/undotree",
@@ -41,8 +41,7 @@ return {
 
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("ibl").setup()
-		end,
-	},
+		main = "ibl",
+		opts = {},
+	}
 }

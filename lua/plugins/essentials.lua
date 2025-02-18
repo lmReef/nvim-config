@@ -1,19 +1,6 @@
 return {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
-	-- {
-	-- 	"sbdchd/neoformat",
-	-- 	opts = {},
-	-- 	config = function()
-	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 			callback = function()
-	-- 				vim.cmd("Neoformat")
-	-- 			end,
-	-- 		})
-	-- 	end,
-	-- 	event = "BufWritePre",
-	-- },
-
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		dependencies = {
