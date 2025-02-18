@@ -1,5 +1,4 @@
 return {
-	"xiyaowong/transparent.nvim",
 	"nvim-lualine/lualine.nvim",
 
 	{
