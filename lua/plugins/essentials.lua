@@ -2,6 +2,59 @@ return {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
 	{
+		"williamboman/mason.nvim",
+		opts = {},
+		dependencies = {
+			"luarocks/luarocks",
+		},
+	},
+
+	{
+		"williamboman/mason-lspconfig.nvim",
+		opts = {
+			handlers = {
+				function(server_name) -- default handler
+					require("lspconfig")[server_name].setup({})
+				end,
+			},
+		},
+	},
+
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		opts = {
+			ensure_installed = {
+				"vim-language-server",
+				"vint",
+				-- lua
+				"stylua",
+				"selene",
+				"lua-language-server",
+				-- bash
+				"bash-language-server",
+				"shfmt",
+				"shellcheck",
+				"shellharden",
+				-- python
+				"pyright",
+				"autoflake",
+				"isort", -- reorder-python-imports seems better but requires some setup
+				-- js
+				"typescript-language-server",
+				"svelte-language-server",
+				"biome",
+				"prettierd",
+				-- "astro-language-server",
+				-- other
+				"snyk",
+				"snyk-ls",
+				"marksman",
+				"gdtoolkit",
+			},
+		},
+	},
+
+	{
 		"VonHeikemen/lsp-zero.nvim",
 		dependencies = {
 			"neovim/nvim-lspconfig",
@@ -20,26 +73,6 @@ return {
 
 				-- 	"rafamadriz/friendly-snippets",
 				-- },
-			},
-			{
-				"williamboman/mason-lspconfig.nvim",
-				opts = {
-					ensure_installed = {},
-					handlers = {
-						function(server_name) -- default handler
-							require("lspconfig")[server_name].setup({})
-						end,
-					},
-				},
-				dependencies = {
-					{
-						"williamboman/mason.nvim",
-						opts = {},
-						dependencies = {
-							"luarocks/luarocks",
-						},
-					},
-				},
 			},
 		},
 	},
