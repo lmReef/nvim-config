@@ -33,12 +33,12 @@ return {
 				-- bash
 				"bash-language-server",
 				"shfmt",
+				"beautysh",
 				"shellcheck",
 				"shellharden",
 				-- python
 				"pyright",
-				"autoflake",
-				"isort", -- reorder-python-imports seems better but requires some setup
+				"ruff",
 				-- js
 				"typescript-language-server",
 				"svelte-language-server",
@@ -48,7 +48,6 @@ return {
 				-- other
 				"snyk",
 				"snyk-ls",
-				"marksman",
 				"gdtoolkit",
 			},
 		},
