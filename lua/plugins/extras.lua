@@ -3,8 +3,21 @@ return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"simrat39/symbols-outline.nvim",
 
-	{ "nextflow-io/vim-language-nextflow", ft = "nextflow" },
-	{ "vimwiki/vimwiki",                   keys = "<leader>w" },
+	{ "vimwiki/vimwiki", keys = "<leader>w" },
+
+	{
+		"nextflow-io/vim-language-nextflow",
+		config = function()
+			vim.treesitter.language.register("groovy", "nextflow")
+		end,
+		ft = "nextflow",
+	},
+
+	{
+		"chentoast/marks.nvim",
+		event = "VeryLazy",
+		opts = {},
+	},
 
 	{
 		"folke/zen-mode.nvim",
@@ -12,7 +25,7 @@ return {
 			"folke/twilight.nvim",
 		},
 		config = function()
-			require('zen-mode').setup({
+			require("zen-mode").setup({
 				plugins = {
 					twilight = { enabled = true },
 				},
@@ -21,11 +34,11 @@ return {
 				end,
 				on_close = function()
 					vim.cmd("silent !tmux set status on")
-				end
+				end,
 			})
 			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
 		end,
-		keys = "<leader>z"
+		keys = "<leader>z",
 	},
 
 	{
@@ -65,5 +78,5 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		opts = {},
-	}
+	},
 }
