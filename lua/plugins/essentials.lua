@@ -200,8 +200,9 @@ return {
 			render = "wrapped-compact",
 			stages = "fade_in_slide_out",
 			fps = 90,
-			timeout = 3500,
-			background_colour = "#999999",
+			timeout = 3000,
+			top_down = false,
+			background_colour = "TabLine",
 		},
 	},
 }
