@@ -1,5 +1,6 @@
 return {
 	"mhartington/formatter.nvim",
+	event = "BufWritePre",
 	config = function()
 		require("formatter").setup({
 			-- documentation here: https://github.com/mhartington/formatter.nvim/tree/master/lua/formatter/filetypes
