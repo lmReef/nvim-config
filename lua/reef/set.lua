@@ -1,4 +1,4 @@
--- disable netrw for nvim-tree
+-- disable netrw for neo-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
