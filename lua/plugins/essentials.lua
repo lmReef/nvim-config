@@ -49,6 +49,7 @@ return {
 				"snyk",
 				"snyk-ls",
 				"gdtoolkit",
+				"rustfmt",
 			},
 		},
 	},

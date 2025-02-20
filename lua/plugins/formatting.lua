@@ -47,6 +47,8 @@ return {
 					require("formatter.filetypes.python").ruff,
 				},
 
+				rust = { require("formatter.filetypes.rust").rustfmt },
+
 				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 			},
 		})
