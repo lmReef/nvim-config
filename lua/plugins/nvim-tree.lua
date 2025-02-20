@@ -52,6 +52,11 @@ return {
 				api.tree.open()
 				close_fully = true
 			end, { desc = "Exit file to nvim tree" })
+
+			-- keymap to toggle the sidebar
+			vim.keymap.set("n", "<leader>i", function()
+				api.tree.toggle()
+			end)
 		end,
 	},
 }
