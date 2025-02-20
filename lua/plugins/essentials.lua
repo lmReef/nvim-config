@@ -47,7 +47,6 @@ return {
 				-- "astro-language-server",
 				-- other
 				"snyk",
-				"snyk-ls",
 				"gdtoolkit",
 				"rustfmt",
 			},
