@@ -117,6 +117,7 @@ return {
 				},
 				event_handlers = {
 					{
+						-- event = "neo_tree_buffer_leave" -- TODO: harpoon integration
 						event = "file_opened",
 						handler = function()
 							vim.cmd(":Neotree action=show")
@@ -130,6 +131,9 @@ return {
 					vim.cmd("Neotree close")
 					vim.cmd("Neotree position=current reveal")
 				end
+			end)
+			vim.keymap.set("n", "<leader>i", function()
+				vim.cmd("Neotree toggle action=show")
 			end)
 		end,
 	},
