@@ -42,9 +42,12 @@ return {
 				-- js
 				"typescript-language-server",
 				"svelte-language-server",
+				-- "astro-language-server",
 				"biome",
 				"prettierd",
-				-- "astro-language-server",
+				-- docker
+				"dockerfile-language-server dockerls",
+				"hadolint",
 				-- other
 				"snyk",
 				"gdtoolkit",
