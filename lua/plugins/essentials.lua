@@ -46,7 +46,7 @@ return {
 				"biome",
 				"prettierd",
 				-- docker
-				"dockerfile-language-server dockerls",
+				"dockerfile-language-server",
 				"hadolint",
 				-- other
 				"snyk",
