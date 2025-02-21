@@ -33,6 +33,7 @@ require("lualine").setup({
 					newfile = "[New]", -- Text to show for newly created file before first write
 				},
 			},
+			{ "harpoon2" },
 		},
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "progress" },

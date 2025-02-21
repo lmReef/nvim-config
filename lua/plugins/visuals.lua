@@ -1,5 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	"letieu/harpoon-lualine",
 
 	{
 		"nvim-tree/nvim-web-devicons",
@@ -14,7 +15,7 @@ return {
 	-- themes
 
 	{ "AlphaTechnolog/pywal.nvim", name = "pywal" },
-	{ "navarasu/onedark.nvim",     name = "onedark" },
+	{ "navarasu/onedark.nvim", name = "onedark" },
 	-- { "rose-pine/neovim",          name = "rose-pine" },
 	-- { "maxmx03/dracula.nvim",      name = "dracula" },
 	-- { "catppuccin/nvim",           name = "catppuccin" },
