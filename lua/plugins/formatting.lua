@@ -50,6 +50,12 @@ return {
 
 				rust = { require("formatter.filetypes.rust").rustfmt },
 
+				nextflow = {
+					function()
+						vim.lsp.buf.format()
+					end,
+				},
+
 				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 			},
 		})
