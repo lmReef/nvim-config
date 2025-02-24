@@ -37,9 +37,28 @@ end)
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
-local lspconfig_defaults = require("lspconfig").util.default_config
+local lspconfig = require("lspconfig")
+local lspconfig_defaults = lspconfig.util.default_config
 lspconfig_defaults.capabilities =
 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+
+-- config for individual lsps
+lspconfig.nextflow_ls.setup({
+	cmd = {
+		"java",
+		"-jar",
+		os.getenv("HOME") .. "/projects/nextflow-lsp/build/libs/language-server-all.jar",
+	},
+	filetypes = { "nextflow" },
+	root_dir = lspconfig.util.root_pattern("nextflow.config", ".git"),
+	settings = {
+		nextflow = {
+			files = {
+				exclude = { ".git", ".nf-test", "work" },
+			},
+		},
+	},
+})
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
