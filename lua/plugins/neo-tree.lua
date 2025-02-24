@@ -30,6 +30,12 @@ return {
 					scan_mode = "deep",
 					group_empty_dirs = true, -- when true, empty folders will be grouped together
 					use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
+					filtered_items = {
+						visible = true,
+						hide_dotfiles = false,
+						hide_gitignored = true,
+						never_show = { ".git" },
+					},
 					components = {
 						harpoon_index = function(config, node, _)
 							local harpoon_list = require("harpoon"):list()
