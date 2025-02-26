@@ -48,3 +48,13 @@ vim.opt.showcmd = false
 vim.opt.ruler = false
 
 vim.opt.pumheight = 5 -- set pop up max items | cmp, suggestions
+
+-- set additional file types
+vim.filetype.add({
+	extension = {
+		nf = "nextflow",
+	},
+	filename = {
+		["nextflow.config"] = "nextflow",
+	},
+})

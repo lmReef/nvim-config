@@ -7,9 +7,6 @@ return {
 
 	{
 		"nextflow-io/vim-language-nextflow",
-		config = function()
-			vim.treesitter.language.register("groovy", "nextflow")
-		end,
 		ft = "nextflow",
 	},
 
