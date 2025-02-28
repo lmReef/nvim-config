@@ -1,6 +1,5 @@
 return {
 	"mhartington/formatter.nvim",
-	event = "BufWritePre",
 	config = function()
 		require("formatter").setup({
 			-- documentation here: https://github.com/mhartington/formatter.nvim/tree/master/lua/formatter/filetypes
@@ -60,9 +59,9 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("BufWritePre", {
 			callback = function()
-				vim.cmd("FormatWrite")
+				vim.cmd("Format")
 			end,
 		})
 	end,
