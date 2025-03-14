@@ -59,9 +59,9 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("BufWritePre", {
+		vim.api.nvim_create_autocmd("BufWritePost", {
 			callback = function()
-				vim.cmd("Format")
+				vim.cmd("FormatWrite")
 			end,
 		})
 	end,
