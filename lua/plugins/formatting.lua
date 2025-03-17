@@ -28,21 +28,21 @@ return {
 				zsh = { require("formatter.filetypes.zsh").beautysh },
 
 				python = {
-					function()
-						-- remove unused imports https://docs.astral.sh/ruff/rules/#F401
-						return {
-							exe = "ruff",
-							args = {
-								"check",
-								"-q",
-								"--select",
-								"F401",
-								"--fix",
-								"-",
-							},
-							stdin = true,
-						}
-					end,
+					-- function()
+					-- 	-- remove unused imports https://docs.astral.sh/ruff/rules/#F401
+					-- 	return {
+					-- 		exe = "ruff",
+					-- 		args = {
+					-- 			"check",
+					-- 			"-q",
+					-- 			"--select",
+					-- 			"F401",
+					-- 			"--fix",
+					-- 			"-",
+					-- 		},
+					-- 		stdin = true,
+					-- 	}
+					-- end,
 					require("formatter.filetypes.python").iruff, -- sort imports
 					require("formatter.filetypes.python").ruff,
 				},
