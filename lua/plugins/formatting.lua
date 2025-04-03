@@ -57,7 +57,6 @@ return {
 							args = {
 								util.escape_path(util.get_current_buffer_file_path()),
 							},
-							stdin = true,
 						}
 					end,
 				},
@@ -72,7 +71,7 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("BufWritePre", {
 			callback = function()
 				vim.cmd("FormatWrite")
 			end,
