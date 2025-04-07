@@ -49,7 +49,6 @@ return {
 				"dockerfile-language-server",
 				"hadolint",
 				-- other
-				"snyk",
 				"gdtoolkit",
 				"rustfmt",
 			},
