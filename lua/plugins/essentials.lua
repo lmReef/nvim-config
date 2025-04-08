@@ -135,6 +135,7 @@ return {
 			vim.keymap.set("n", "<leader>pc", builtin.git_commits, { desc = "Telescope git commits" })
 			vim.keymap.set("n", "<leader>pb", builtin.git_branches, { desc = "Telescope git branches" })
 			vim.keymap.set("n", "<leader>pg", builtin.git_status, { desc = "Telescope git status" })
+			vim.keymap.set("n", "<leader>pv", builtin.git_stash, { desc = "Telescope git stash" })
 			vim.keymap.set("n", "<leader>pm", builtin.marks, { desc = "Telescope marks" })
 			vim.keymap.set("n", "<leader>pt", ":Easypick tmux-ls<cr><esc>", { desc = "Telescope tmux sessions" })
 			vim.keymap.set("n", "<leader>pn", function()
