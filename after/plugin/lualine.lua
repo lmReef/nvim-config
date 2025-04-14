@@ -20,34 +20,40 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = {
+		lualine_b = {
 			{
 				"filename",
 				file_status = true,
 				newfile_status = true,
 				path = 1,
 				symbols = {
-					modified = "[+]", -- Text to show when the file is modified.
-					readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
-					unnamed = "[No Name]", -- Text to show for unnamed buffers.
-					newfile = "[New]", -- Text to show for newly created file before first write
+					modified = "󱇧",
+					readonly = "󰈡",
+					newfile = "",
 				},
 			},
-			{ "harpoon2" },
+			"diagnostics",
+		},
+		lualine_c = {
+			"progress",
+			"diff",
+			"harpoon2",
 		},
 		lualine_x = {
+			"filetype",
+		},
+		lualine_y = {
 			function()
 				if os.getenv("VIRTUAL_ENV_PROMPT") then
 					return " " .. os.getenv("VIRTUAL_ENV_PROMPT")
 				end
 				return ""
 			end,
-			"lsp_status",
-			"filetype",
 		},
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = {
+			"branch",
+			-- "location",
+		},
 	},
 	inactive_sections = {
 		lualine_a = {},
