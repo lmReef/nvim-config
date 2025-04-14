@@ -36,7 +36,16 @@ require("lualine").setup({
 			},
 			{ "harpoon2" },
 		},
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_x = {
+			function()
+				if os.getenv("VIRTUAL_ENV_PROMPT") then
+					return " " .. os.getenv("VIRTUAL_ENV_PROMPT")
+				end
+				return ""
+			end,
+			"lsp_status",
+			"filetype",
+		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
