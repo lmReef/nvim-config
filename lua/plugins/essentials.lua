@@ -137,7 +137,8 @@ return {
 			vim.keymap.set("n", "<leader>pg", builtin.git_status, { desc = "Telescope git status" })
 			vim.keymap.set("n", "<leader>pv", builtin.git_stash, { desc = "Telescope git stash" })
 			vim.keymap.set("n", "<leader>pm", builtin.marks, { desc = "Telescope marks" })
-			vim.keymap.set("n", "<leader>pt", ":Easypick tmux-ls<cr><esc>", { desc = "Telescope tmux sessions" })
+			vim.keymap.set("n", "<leader>pr", ":Easypick tmux-ls<cr>", { desc = "Telescope tmux sessions" })
+			vim.keymap.set("n", "<leader>pt", ":Easypick tmux-new<cr>", { desc = "Telescope new tmux session" })
 			vim.keymap.set("n", "<leader>pn", function()
 				vim.cmd(":Telescope notify")
 			end, { desc = "Telescope notification history" })
@@ -154,6 +155,21 @@ return {
 						name = "tmux-ls",
 						command = "tmux ls | grep -o -P '^.*(?=: )'",
 						action = easypick.actions.nvim_command(":silent !tmux switch-client -t"),
+					},
+					{
+						name = "tmux-new",
+						command = "fd -HL -td -d1 . "
+							.. os.getenv("HOME")
+							.. " "
+							.. os.getenv("HOME")
+							.. "/projects "
+							.. os.getenv("HOME")
+							.. "/.config "
+							.. os.getenv("HOME")
+							.. "/.local/bin",
+						action = easypick.actions.nvim_command(
+							":silent !" .. os.getenv("HOME") .. "/.local/bin/scripts/tmux-sessionizer.sh"
+						),
 					},
 				},
 			})
