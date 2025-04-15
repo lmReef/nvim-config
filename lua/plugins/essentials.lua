@@ -137,8 +137,12 @@ return {
 			vim.keymap.set("n", "<leader>pg", builtin.git_status, { desc = "Telescope git status" })
 			vim.keymap.set("n", "<leader>pv", builtin.git_stash, { desc = "Telescope git stash" })
 			vim.keymap.set("n", "<leader>pm", builtin.marks, { desc = "Telescope marks" })
+<<<<<<< HEAD
 			vim.keymap.set("n", "<leader>pr", ":Easypick tmux-ls<cr>", { desc = "Telescope tmux sessions" })
 			vim.keymap.set("n", "<leader>pt", ":Easypick tmux-new<cr>", { desc = "Telescope new tmux session" })
+=======
+			vim.keymap.set("n", "<leader>pt", ":Easypick tmux-ls<cr>", { desc = "Telescope tmux sessions" })
+>>>>>>> a2514a7 (random stuff for merge)
 			vim.keymap.set("n", "<leader>pn", function()
 				vim.cmd(":Telescope notify")
 			end, { desc = "Telescope notification history" })

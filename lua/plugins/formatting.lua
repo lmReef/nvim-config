@@ -67,7 +67,10 @@ return {
 					end,
 				},
 
-				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
+				["*"] = {
+					require("formatter.filetypes.any").remove_trailing_whitespace,
+					vim.lsp.buf.format,
+				},
 			},
 		})
 
