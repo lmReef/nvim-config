@@ -35,6 +35,10 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers["textDocument/hover"], {
+	border = "rounded",
+})
+
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
 local lspconfig = require("lspconfig")
@@ -57,11 +61,9 @@ cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered({
 			border = "rounded",
-			winhighlight = "Normal:Normal,FloatBorder:Normal",
 		}),
 		documentation = cmp.config.window.bordered({
 			border = "rounded",
-			winhighlight = "Normal:Normal,FloatBorder:Normal",
 		}),
 	},
 	formatting = {
