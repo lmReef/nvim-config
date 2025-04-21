@@ -1,6 +1,6 @@
 return {
 	"yetone/avante.nvim",
-	keys = "<leader>a",
+	keys = "<leader>aa",
 	version = false, -- Never set this value to "*"! Never!
 
 	opts = {
