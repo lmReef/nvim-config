@@ -1,3 +1,7 @@
+-- if exists(vim.g.vscode) then
+-- 	return
+-- end
+
 local pipe = "/tmp/godot.pipe"
 
 vim.lsp.start({

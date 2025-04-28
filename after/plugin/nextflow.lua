@@ -1,3 +1,7 @@
+-- if exists(vim.g.vscode) then
+-- 	return
+-- end
+
 local lspconfig = require("lspconfig")
 
 lspconfig.nextflow_ls.setup({
