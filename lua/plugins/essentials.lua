@@ -106,7 +106,7 @@ return {
 
 	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
+		-- dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 		config = function()
 			local telescope = require("telescope")
 			telescope.setup({
@@ -122,11 +122,11 @@ return {
 						hidden = true,
 					},
 				},
-				extensions = {
-					"fzf",
-				},
+				-- extensions = {
+				-- 	"fzf",
+				-- },
 			})
-			telescope.load_extension("fzf")
+			-- telescope.load_extension("fzf")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "Telescope help tags" })
