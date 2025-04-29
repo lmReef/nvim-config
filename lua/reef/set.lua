@@ -31,6 +31,11 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 100
 
+-- Enable virtual text diagnostics
+vim.diagnostic.config({
+	virtual_text = true,
+})
+
 vim.opt.cursorline = true
 -- vim.opt.colorcolumn = '80'
 
