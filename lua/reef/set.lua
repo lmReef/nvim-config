@@ -54,6 +54,8 @@ vim.opt.ruler = false
 
 vim.opt.pumheight = 7 -- set pop up max items | cmp, suggestions
 
+vim.hl.priorities.semantic_tokens = 95 -- treesitter has default 100
+
 -- set additional file types
 vim.filetype.add({
 	extension = {
