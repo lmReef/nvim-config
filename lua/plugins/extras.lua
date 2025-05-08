@@ -3,8 +3,6 @@ return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"simrat39/symbols-outline.nvim",
 
-	{ "vimwiki/vimwiki", keys = "<leader>w" },
-
 	{
 		"nextflow-io/vim-language-nextflow",
 		ft = "nextflow",
