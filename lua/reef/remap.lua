@@ -27,7 +27,8 @@ vim.keymap.set("n", "<C-_>", [[:/\<<C-r><C-w>\><cr>]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", ":silent !chmod +x %<cr>")
 
-vim.keymap.set("n", "<leader>qw", ":wq<cr>")
+vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>wq", ":wq<cr>")
 vim.keymap.set("n", "<leader>qq", ":q!<cr>")
 
 -- git
@@ -36,9 +37,6 @@ vim.keymap.set("n", "<leader>gb", ":tab Git blame<cr>")
 vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<cr>")
 vim.keymap.set("n", "<leader>ga", ":lua MiniDiff.toggle_overlay()<cr>")
 vim.keymap.set("n", "<leader>gc", ":Git commit<cr>")
-
--- file level binds
-vim.keymap.set("n", "<leader>fs", ":w<cr>")
 vim.keymap.set("n", "<leader>fa", ":Git add %<cr>")
 
 -- open links
