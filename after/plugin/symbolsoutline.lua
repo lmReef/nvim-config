@@ -1,7 +1,3 @@
--- if exists(vim.g.vscode) then
--- 	return
--- end
-
 local opts = {
 	highlight_hovered_item = true,
 	show_guides = true,

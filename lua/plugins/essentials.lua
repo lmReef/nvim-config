@@ -14,9 +14,7 @@ return {
 		opts = {
 			handlers = {
 				function(server_name) -- default handler
-					-- if not exists(vim.g.vscode) then
 					require("lspconfig")[server_name].setup({})
-					-- end
 				end,
 			},
 		},
