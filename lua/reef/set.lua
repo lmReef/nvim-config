@@ -1,6 +1,4 @@
--- disable netrw for neo-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.opt.shell = "/usr/bin/env zsh"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -31,30 +29,21 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 100
 
--- Enable virtual text diagnostics
+vim.opt.cursorline = true
+
+-- set pop up max items | cmp, suggestions
+vim.opt.pumheight = 7
+
+vim.hl.priorities.semantic_tokens = 95 -- treesitter has default 100
+
+-- enable inline error/warns
 vim.diagnostic.config({
 	virtual_text = true,
 })
 
-vim.opt.cursorline = true
--- vim.opt.colorcolumn = '80'
-
--- set netrw file preview styles
-vim.g.netrw_preview = 1
--- vim.g.netrw_liststyle = 3 -- 3 for tree style
-vim.g.netrw_winsize = 60
-
-vim.g.mapleader = " "
-
-vim.opt.shell = "/usr/bin/env zsh"
-
 -- performance options
 vim.opt.showcmd = false
 vim.opt.ruler = false
-
-vim.opt.pumheight = 7 -- set pop up max items | cmp, suggestions
-
-vim.hl.priorities.semantic_tokens = 95 -- treesitter has default 100
 
 -- set additional file types
 vim.filetype.add({
@@ -65,3 +54,7 @@ vim.filetype.add({
 		["nextflow.config"] = "nextflow",
 	},
 })
+
+-- disable netrw for neo-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
