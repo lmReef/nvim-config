@@ -29,7 +29,7 @@ vim.keymap.set("n", "<leader>x", ":silent !chmod +x %<cr>")
 
 vim.keymap.set("n", "<leader>w", ":w<cr>")
 vim.keymap.set("n", "<leader>wq", ":wq<cr>")
-vim.keymap.set("n", "<leader>qq", ":q!<cr>")
+vim.keymap.set("n", "<leader>q", ":q!<cr>")
 
 -- git
 vim.keymap.set("n", "<leader>gs", ":tab Git<cr>))")
