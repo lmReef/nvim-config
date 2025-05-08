@@ -108,6 +108,14 @@ return {
 		config = function()
 			local telescope = require("telescope")
 			telescope.setup({
+				defaults = {
+					mappings = {
+						i = {
+							["<C-k>"] = "move_selection_next",
+							["<C-j>"] = "move_selection_previous",
+						},
+					},
+				},
 				pickers = {
 					live_grep = {
 						file_ignore_patterns = { "node_modules", "%.git", "%.github", "%.venv" },
