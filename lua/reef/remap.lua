@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", ":silent !chmod +x %<cr>")
 
 -- git
-vim.keymap.set("n", "<leader>gs", ":tab Git<cr>")
+vim.keymap.set("n", "<leader>gs", ":tab Git<cr>))")
 vim.keymap.set("n", "<leader>gb", ":tab Git blame<cr>")
 vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<cr>")
 vim.keymap.set("n", "<leader>ga", ":lua MiniDiff.toggle_overlay()<cr>")
