@@ -121,15 +121,15 @@ return {
 						},
 					},
 				},
-				event_handlers = {
-					{
-						-- event = "neo_tree_buffer_leave" -- TODO: harpoon integration
-						event = "file_opened",
-						handler = function()
-							vim.cmd(":Neotree action=show")
-						end,
-					},
-				},
+				-- event_handlers = {
+				-- 	{
+				-- 		-- event = "neo_tree_buffer_leave" -- TODO: harpoon integration
+				-- 		event = "file_opened",
+				-- 		handler = function()
+				-- 			vim.cmd(":Neotree action=show")
+				-- 		end,
+				-- 	},
+				-- },
 			})
 
 			vim.keymap.set("n", "-", function()
