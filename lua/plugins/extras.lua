@@ -31,7 +31,7 @@ return {
 					vim.cmd("silent !tmux set status on")
 				end,
 			})
-			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
+			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode, { desc = "ZenMode toggle" })
 		end,
 		keys = "<leader>z",
 	},
@@ -42,7 +42,7 @@ return {
 			vim.keymap.set("n", "<leader>u", function()
 				vim.cmd.UndotreeToggle()
 				vim.cmd.UndotreeFocus()
-			end)
+			end, { desc = "UndoTree toggle" })
 		end,
 		keys = "<leader>u",
 	},

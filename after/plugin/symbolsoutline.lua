@@ -64,4 +64,4 @@ local opts = {
 
 require("symbols-outline").setup(opts)
 
-vim.keymap.set("n", "<leader>o", "<cmd>:SymbolsOutline<CR>")
+vim.keymap.set("n", "<leader>o", "<cmd>:SymbolsOutline<CR>", {desc="SymbolsOutline toggle"})

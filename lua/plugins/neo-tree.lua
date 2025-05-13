@@ -140,7 +140,7 @@ return {
 			end)
 			vim.keymap.set("n", "<leader>i", function()
 				vim.cmd("Neotree toggle action=show")
-			end)
+			end, { desc = "Neotree toggle" })
 		end,
 	},
 }
