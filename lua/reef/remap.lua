@@ -38,6 +38,7 @@ vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<cr>")
 vim.keymap.set("n", "<leader>ga", ":lua MiniDiff.toggle_overlay()<cr>")
 vim.keymap.set("n", "<leader>gc", ":Git commit<cr>")
 vim.keymap.set("n", "<leader>gp", ":Git push<cr>")
+vim.keymap.set("n", "<leader>go", ":Git pull<cr>")
 vim.keymap.set("n", "<leader>fa", ":Git add %<cr>")
 
 -- open links
