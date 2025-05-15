@@ -147,6 +147,9 @@ return {
 			vim.keymap.set("n", "<leader>pn", function()
 				vim.cmd(":Telescope notify")
 			end, { desc = "Telescope notification history" })
+			vim.keymap.set("n", "<leader>pp", function()
+				vim.cmd(":Telescope cherrypick")
+			end, { desc = "Telescope cherry-pick" })
 		end,
 		keys = "<leader>p",
 	},
