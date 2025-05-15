@@ -42,7 +42,7 @@ local cherrypick = function(opts)
 		:find()
 end
 
-branches = function(opts)
+local branches = function(opts)
 	opts = opts or {}
 
 	local format = "%(HEAD)"
