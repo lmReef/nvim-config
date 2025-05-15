@@ -170,6 +170,8 @@ return {
 							.. "/projects "
 							.. os.getenv("HOME")
 							.. "/.config "
+							.. os.getenv("ADDITIONAL_PROJECTS")
+							.. " "
 							.. os.getenv("HOME")
 							.. "/.local/bin",
 						action = easypick.actions.nvim_command(
