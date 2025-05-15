@@ -47,9 +47,9 @@ vim.keymap.set("n", "<leader>go", ":Git pull<cr>", { desc = "Git pull" })
 vim.keymap.set("n", "<leader>fa", ":Git add %<cr>", { desc = "Git add" })
 
 -- open links
-vim.keymap.set("n", "<cr>", function()
-	local word = vim.fn.expand("<cWORD>")
-	if string.find(word, "http") then
-		vim.cmd("silent !" .. os.getenv("BROWSER") .. " " .. word)
-	end
-end)
+-- vim.keymap.set("n", "<cr>", function()
+-- 	local word = vim.fn.expand("<cWORD>")
+-- 	if string.find(word, "http") then
+-- 		vim.cmd("silent !" .. os.getenv("BROWSER") .. " " .. word)
+-- 	end
+-- end)
