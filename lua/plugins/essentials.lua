@@ -173,7 +173,7 @@ return {
 							.. "/projects "
 							.. os.getenv("HOME")
 							.. "/.config "
-							.. os.getenv("ADDITIONAL_PROJECTS")
+							.. (os.getenv("ADDITIONAL_PROJECTS") or "")
 							.. " "
 							.. os.getenv("HOME")
 							.. "/.local/bin",
