@@ -33,6 +33,7 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>x", ":silent !chmod +x %<cr>", { desc = "chmod +x" })
 
 vim.keymap.set("n", "<leader>ww", ":w<cr>", { desc = ":w" })
+vim.keymap.set("n", "<leader>ws", ":noa w<cr>", { desc = ":noa w" })
 vim.keymap.set("n", "<leader>wq", ":wq<cr>", { desc = ":wq" })
 vim.keymap.set("n", "<leader>q", ":q!<cr>", { desc = ":q!" })
 

@@ -10,6 +10,7 @@ return {
 			require("mini.diff").setup({})
 			require("mini.cursorword").setup({})
 			require("mini.pairs").setup({})
+			require("mini.align").setup({})
 
 			local miniclue = require("mini.clue")
 			miniclue.setup({
