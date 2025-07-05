@@ -24,13 +24,14 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
 			ensure_installed = {
+				-- vim
 				"vim-language-server",
 				"vint",
 				-- lua
 				"stylua",
 				"selene",
 				"lua-language-server",
-				-- bash
+				-- bash/zsh
 				"bash-language-server",
 				"shfmt",
 				"beautysh",

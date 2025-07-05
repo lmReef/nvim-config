@@ -66,17 +66,20 @@ return {
 						vim.lsp.buf.format()
 					end,
 				},
-
 				["*"] = {
 					require("formatter.filetypes.any").remove_trailing_whitespace,
-					vim.lsp.buf.format,
+					function()
+						if vim.lsp.buf_is_attached() then
+							vim.lsp.buf.format()
+						end
+					end,
 				},
 			},
 		})
 
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("BufWrite", {
 			callback = function()
-				vim.cmd("FormatWrite")
+				vim.cmd("Format")
 			end,
 		})
 	end,
