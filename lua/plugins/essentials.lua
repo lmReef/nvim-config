@@ -38,7 +38,7 @@ return {
 				"shellcheck",
 				"shellharden",
 				-- python
-				"pyright",
+				"pyrefly",
 				"ruff",
 				-- js
 				"typescript-language-server",
@@ -49,9 +49,15 @@ return {
 				-- docker
 				"dockerfile-language-server",
 				"hadolint",
+				-- c
+				"clangd",
+				"cpplint",
+				"clang-format",
 				-- other
 				"gdtoolkit",
 				"rustfmt",
+				"taplo",
+				"arduino-language-server",
 			},
 		},
 	},
@@ -125,7 +131,15 @@ return {
 						end,
 					},
 					find_files = {
-						file_ignore_patterns = { "node_modules", "%.git", "%.venv" },
+						file_ignore_patterns = {
+							"node_modules",
+							"%.git",
+							"%.venv",
+							"%.uid",
+							"%.import",
+							"%.png",
+							"%.jpg",
+						},
 						hidden = true,
 					},
 				},
