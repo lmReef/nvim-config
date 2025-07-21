@@ -4,7 +4,7 @@ lspconfig.nextflow_ls.setup({
 	cmd = {
 		"java",
 		"-jar",
-		os.getenv("HOME") .. "/.nextflow/lsp/v25.04/v25.04.2.jar",
+		os.getenv("HOME") .. "/.nextflow/lsp/v25.04/v25.04.3.jar",
 	},
 	filetypes = { "nextflow" },
 	root_dir = lspconfig.util.root_pattern("nextflow.config", ".git"),
@@ -16,6 +16,8 @@ lspconfig.nextflow_ls.setup({
 			formatting = {
 				harshilAlignment = true,
 				sortDeclarations = false,
+				typeChecking = true,
+				extendedCompletion = true,
 			},
 		},
 	},

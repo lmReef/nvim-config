@@ -45,16 +45,35 @@ vim.diagnostic.config({
 vim.opt.showcmd = false
 vim.opt.ruler = false
 
+-- disable netrw for neo-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- set additional file types
 vim.filetype.add({
 	extension = {
 		nf = "nextflow",
+		config = function(path, bufnr)
+			local function checkForFile(query)
+				for _index, dir in ipairs({ ".", "..", "../..", "../../.." }) do
+					for value in io.popen("ls -a " .. dir):lines() do
+						if string.match(value, query) then
+							return true
+						end
+					end
+				end
+				return false
+			end
+			-- local content = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] or ""
+
+			if checkForFile("nextflow.config") then
+				return "nextflow"
+			end
+
+			return "config"
+		end,
 	},
 	filename = {
-		["nextflow.config"] = "nextflow",
+		["nf-test.config"] = "config",
 	},
 })
-
--- disable netrw for neo-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
