@@ -44,7 +44,7 @@ return {
 				"typescript-language-server",
 				"svelte-language-server",
 				-- "astro-language-server",
-				"biome",
+				"biome", -- for lsp, not formatter
 				"prettierd",
 				-- docker
 				"dockerfile-language-server",
@@ -58,6 +58,7 @@ return {
 				"rustfmt",
 				"taplo",
 				"arduino-language-server",
+				"ts_query_ls", -- treesitter query files
 			},
 		},
 	},
@@ -97,6 +98,7 @@ return {
 					"query",
 					"gdscript",
 					"python",
+					"bash",
 				},
 				highlight = {
 					enable = true,
@@ -106,6 +108,7 @@ return {
 					enable = true,
 				},
 			})
+			vim.treesitter.language.register("groovy", "nextflow")
 		end,
 	},
 
