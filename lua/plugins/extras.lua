@@ -33,7 +33,6 @@ return {
 			})
 			vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode, { desc = "ZenMode toggle" })
 		end,
-		keys = "<leader>z",
 	},
 
 	{
@@ -44,7 +43,6 @@ return {
 				vim.cmd.UndotreeFocus()
 			end, { desc = "UndoTree toggle" })
 		end,
-		keys = "<leader>u",
 	},
 
 	{
