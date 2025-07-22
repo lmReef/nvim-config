@@ -1,4 +1,4 @@
-vim.opt.shell = "/usr/bin/env zsh"
+vim.opt.shell = "/bin/zsh"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
