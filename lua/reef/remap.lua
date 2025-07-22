@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("n", "<C-c>", "<C-a>", { noremap = true, silent = true })
+
 -- move selected blocks and indent
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
@@ -18,12 +20,14 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete no history" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete no history" })
 
-vim.keymap.set("n", "<C-k>", ":cnext<cr>zz")
-vim.keymap.set("n", "<C-j>", ":cprev<cr>zz")
-vim.keymap.set("n", "<leader>k", ":lnext<cr>zz", { desc = "Jump to next location" })
-vim.keymap.set("n", "<leader>j", ":lprev<cr>zz", { desc = "Jump to prev location" })
+vim.keymap.set("n", "<C-k>", function()
+	vim.diagnostic.jump({ count = -1 })
+end)
+vim.keymap.set("n", "<C-j>", function()
+	vim.diagnostic.jump({ count = 1 })
+end)
 
-vim.keymap.set("n", "<C-_>", [[:/\<<C-r><C-w>\><cr>]])
+vim.keymap.set("n", "<C-_>", [[:/\<<C-r><C-w>\><cr>]], { desc = "Jump to next instance of word" })
 vim.keymap.set(
 	"n",
 	"<leader>s",
