@@ -20,13 +20,6 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete no history" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete no history" })
 
-vim.keymap.set("n", "<C-k>", function()
-	vim.diagnostic.jump({ count = -1 })
-end)
-vim.keymap.set("n", "<C-j>", function()
-	vim.diagnostic.jump({ count = 1 })
-end)
-
 vim.keymap.set("n", "<C-_>", [[:/\<<C-r><C-w>\><cr>]], { desc = "Jump to next instance of word" })
 vim.keymap.set(
 	"n",

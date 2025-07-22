@@ -1,7 +1,7 @@
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
-	local opts = { buffer = bufnr, remap = false }
+	local opts = { buffer = bufnr, noremap = true }
 
 	vim.keymap.set("n", "gd", function()
 		vim.lsp.buf.definition()
@@ -9,29 +9,17 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "K", function()
 		vim.lsp.buf.hover()
 	end, opts)
-	vim.keymap.set("n", "<leader>vws", function()
-		vim.lsp.buf.workspace_symbol()
-	end, opts)
-	vim.keymap.set("n", "<leader>vd", function()
-		vim.diagnostic.open_float()
-	end, opts)
-	vim.keymap.set("n", "]d", function()
+	vim.keymap.set("n", "<C-k>", function()
 		vim.diagnostic.goto_next()
 	end, opts)
-	vim.keymap.set("n", "[d", function()
+	vim.keymap.set("n", "<C-j>", function()
 		vim.diagnostic.goto_prev()
 	end, opts)
-	vim.keymap.set("n", "<leader>la", function()
-		vim.lsp.buf.code_action()
-	end, opts)
-	vim.keymap.set("n", "<leader>lr", function()
+	vim.keymap.set("n", "<leader>l", function()
 		vim.lsp.buf.references()
 	end, opts)
-	vim.keymap.set("n", "<leader>vrn", function()
+	vim.keymap.set("n", "<leader>r", function()
 		vim.lsp.buf.rename()
-	end, opts)
-	vim.keymap.set("i", "<C-h>", function()
-		vim.lsp.buf.signature_help()
 	end, opts)
 end)
 
@@ -55,8 +43,8 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "luasnip", keyword_length = 2 },
-		{ name = "buffer", keyword_length = 3 },
+		{ name = "luasnip" },
+		{ name = "buffer" },
 	},
 	window = {
 		completion = cmp.config.window.bordered({
