@@ -57,6 +57,7 @@ return {
 				"gdtoolkit",
 				"rustfmt",
 				"taplo",
+				"hyprls",
 				"arduino-language-server",
 				"ts_query_ls", -- treesitter query files
 			},
