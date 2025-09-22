@@ -29,10 +29,11 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers["textDocu
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
-local lspconfig = require("lspconfig")
-local lspconfig_defaults = lspconfig.util.default_config
-lspconfig_defaults.capabilities =
-	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+-- TODO: fix this
+-- local lspconfig = require("lspconfig")
+-- local lspconfig_defaults = lspconfig.util.default_config
+-- lspconfig_defaults.capabilities =
+-- 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }

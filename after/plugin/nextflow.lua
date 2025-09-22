@@ -1,17 +1,15 @@
-local lspconfig = require("lspconfig")
-
-lspconfig.nextflow_ls.setup({
+vim.lsp.config["nextflow_ls"] = {
 	cmd = {
 		"java",
 		"-jar",
 		os.getenv("HOME") .. "/.nextflow/lsp/v25.04/v25.04.3.jar",
 	},
 	filetypes = { "nextflow" },
-	root_dir = lspconfig.util.root_pattern("nextflow.config", ".git"),
+	root_markers = { ".git", "nextflow.config" },
 	settings = {
 		nextflow = {
 			files = {
-				exclude = { ".git", ".nf-test", "work" },
+				exclude = { ".git", ".nf-test", ".nf-test-unit-test", "work" },
 			},
 			formatting = {
 				harshilAlignment = true,
@@ -21,4 +19,6 @@ lspconfig.nextflow_ls.setup({
 			},
 		},
 	},
-})
+	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+}
+vim.lsp.enable("nextflow_ls")
