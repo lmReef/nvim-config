@@ -12,8 +12,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- yank to system clipboard
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to clipboard" })
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to clipboard" })
+vim.keymap.set("n", "y", '"+y', { desc = "Yank to clipboard" })
+vim.keymap.set("v", "y", '"+y', { desc = "Yank to clipboard" })
 vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- delete no hist
