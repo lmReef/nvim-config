@@ -7,7 +7,7 @@ return {
 	---@type avante.Config
 	opts = {
 		instructions_file = "avante.md",
-		provider = "claude",
+		provider = "copilot",
 		providers = {
 			claude = {
 				endpoint = "https://api.anthropic.com",
